@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".FlightLogActivity">
+
+    <!-- Flight Log Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flight Log"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="8dp" />
+
+    <!-- Departure Airport Input -->
+    <EditText
+        android:id="@+id/input_departure"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Departure Airport (e.g., DTW)"
+        android:inputType="text" />
+
+    <!-- Arrival Airport Input -->
+    <EditText
+        android:id="@+id/input_arrival"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Arrival Airport (e.g., ORL)"
+        android:inputType="text" />
+
+    <!-- Date Input -->
+    <EditText
+        android:id="@+id/input_date"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Date (MM/DD/YYYY)"
+        android:inputType="date" />
+
+    <!-- Notes Input -->
+    <EditText
+        android:id="@+id/input_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Notes"
+        android:inputType="textMultiLine"
+        android:minLines="3" />
+
+    <!-- Add Flight Button -->
+    <Button
+        android:id="@+id/btn_add_flight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Flight"
+        android:backgroundTint="@color/black"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp" />
+
+    <!-- Flight Log List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFlights"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        tools:listitem="@layout/item_flight_log" />
+
+</LinearLayout>
+
